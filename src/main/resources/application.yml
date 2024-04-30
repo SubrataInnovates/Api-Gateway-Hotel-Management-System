@@ -44,5 +44,9 @@ okta:
     scopes: openid, profile, email, offline_access
 
 
-
+#zipkin
+management:
+  tracing:
+    sampling:
+      probability: 1.0
 
