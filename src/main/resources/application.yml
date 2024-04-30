@@ -16,6 +16,10 @@ spring:
           uri: lb://HOTEL-SERVICE
           predicates:
             - Path=/hotels/**
+
+
+#  config:
+#    import: configserver://localhost:8085
        
 server:
   port: 8084
@@ -28,3 +32,17 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     prefer-ip-address: true
+
+
+# okta configuration for api gateway
+okta:
+  oauth2:
+    issuer: https://dev-70321398.okta.com/oauth2/default
+    audience: api://default
+    client-id: 0oago8bi0qD34LfGn5d7
+    client-secret: Cbj6pqMuFd7JinCFzexVpVnw6puVt3pu2ENQ89iO_HY8KenW2XqgmYkGKe8XrBGc
+    scopes: openid, profile, email, offline_access
+
+
+
+
